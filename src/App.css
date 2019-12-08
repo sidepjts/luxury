@@ -1,55 +1,114 @@
+*{font-family: 'Playfair Display', serif;}
+
+body {
+    background-color: #000;
+}
+
 a, a:link, a:visited, a:focus, a:hover, a:active{
-    color: #44bdbd;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.page-content {
+    margin-top: -2%;
 }
 
 .mdl-navigation__link:hover {
-    color: rgba(0,0,0,.8) !important;
+    background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.mdl-navigation .mdl-navigation__link {
-    font: 400 16px Open Sans, Arial, Helvetica, sans-serif;
+
+.navigation-bar {
+    /*font: 400 16px Open Sans, Arial, Helvetica, sans-serif;*/
     /*font-family: "DIN Alternate", sans-serif;*/
+    font-family: 'Playfair Display', serif;
+}
+
+.navigation-bar a {
     font-size: 16px;
     font-weight: bold;
 }
 
-.my-logo {
-    font: 400 26px Open Sans, Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: lightgray;
-    text-decoration: none;
-    cursor: pointer;
+.gold-gradient {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.home-grid {
+.gold-gradient h1 {
+    background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    /*font-size: 18vw;*/
+    margin: 0;
+    font-weight: 400;
+}
+
+.gold-gradient h1:after {
+    content: attr(data-heading);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow:
+            -1px 0 1px #c6bb9f,
+            0 1px 1px #c6bb9f,
+            5px 5px 10px rgba(0, 0, 0, 0.4),
+            -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Home */
+.landing-grid {
+    text-align: -moz-center;
+    text-align: -webkit-center;
+}
+
+.is-small-screen .landing-cell {
+    border: 6px solid;
+    border-image-source: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%);
+    border-image-slice: 1;
+}
+
+.banner-text {
     text-align: center;
-    background: rgba(138,137,166,0.9);
-    background: linear-gradient(90deg, rgba(138,137,166,0.6) 0%, rgba(218,240,236,0.2864320728291317) 43%, rgba(61,187,213,0.6) 100%);
+    background: linear-gradient(to bottom, #cfc09f 22%,#634f2c 24%, #cfc09f 26%, #cfc09f 27%,#ffecb3 40%,#3a2c0f 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     width: 50%;
     margin-top: 5%;
-    border-radius: 65px;
 }
 
-.home-grid img {
+.is-small-screen .banner-text {
+    width: 100%;
+    border-radius: 0;
+}
+
+.banner-text img {
     border-radius: 50%;
-    width:  30%;
+    width: 30%;
+    margin-top: 2%;
 }
 
-.home-grid h1 {
+.banner-text h1 {
     font-size: 40px;
     font-weight: bold;
-    color: #777777;
+    color: black;
     margin-bottom: auto;
 }
 
-.home-grid hr {
+.banner-text hr {
     margin: auto;
     border-top: 5px dotted lightblue;
     width: 50%;
 }
 
-.home-grid p {
+.banner-text p {
     font-size: 20px;
     color: #f2f3f7;
     padding: 1em;
@@ -64,7 +123,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
 
 .icon-circle-background {
     background: #e0e0e0;
-    padding:10px;
+    padding: 10px;
     border-radius: 50%;
 }
 
@@ -105,4 +164,9 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
     font-size: 50px;
     text-align: center;
     padding: 20px;
+}
+
+/* About */
+.about-page {
+    background-color: #fff;
 }

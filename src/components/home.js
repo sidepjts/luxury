@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import {Cell, Grid} from "react-mdl";
 import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-import {FaChevronDown} from "react-icons/fa";
 
 class Home extends Component {
     render() {
         return(
-            <div style={{width: '100%', marginTop: '4%'}}>
-                <Grid className='home-grid'>
-                    <Cell col={12}>
-                        <img src={process.env.PUBLIC_URL + '/images/profile.jpg'} alt='avatar' className='avatar-img'/>
-                        <div>
+            <div style={{width: "100%", margin: "auto"}}>
+                <Grid className="landing-grid">
+                    <Cell col={12} className="landing-cell">
+                        <div className="banner-text">
+                            <img src={process.env.PUBLIC_URL + '/images/profile.jpg'}
+                                 alt='img-profile'
+                            />
                             <h1>Software Engineer</h1>
 
                             <hr/>
@@ -52,9 +53,6 @@ class Home extends Component {
                         </div>
                     </Cell>
                 </Grid>
-                <div className="fa-chevron-down">
-                    <FaChevronDown/>
-                </div>
             </div>
         )
     }
