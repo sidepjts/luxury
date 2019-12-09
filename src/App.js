@@ -9,7 +9,7 @@ function App() {
         <div>
             <Layout>
                 <Header title={
-                    <span><Link to="/">
+                    <span><Link to="/luxury">
                         <div className="gold-gradient">
                             <h1 data-heading="CarloButelli">CarloButelli</h1>
                         </div>
